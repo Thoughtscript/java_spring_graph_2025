@@ -62,7 +62,7 @@ $ > MATCH (s:Student {firstname: "Class", lastname: "Dunce"}) RETURN s;
 
 > Other **CQL** queries are available [here](./neo4j/init.cql).
 
-> (Some) Acceptance and Live Integration Tests are available [here](./_acceptance/Java%20Spring%20Graph.postman_collection.json) through **Postman**.
+> (Some) Acceptance and Live Integration Tests are available [here](./_acceptance/Java%20Spring%20Graph.postman_collection.json) through **Postman**. (Some example Unit Tests have also been [added](./bootgraph/src/test) and [configured](./bootgraph/pom.xml).)
 
 ## Neo4J
 

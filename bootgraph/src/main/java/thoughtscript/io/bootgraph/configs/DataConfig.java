@@ -11,9 +11,9 @@ public class DataConfig {
 
     @Bean
     org.neo4j.cypherdsl.core.renderer.Configuration cypherDsl() {
-	    return org.neo4j.cypherdsl.core.renderer.Configuration
-            .newConfig()
-            .withDialect(Dialect.NEO4J_5)
-            .build();
+        return org.neo4j.cypherdsl.core.renderer.Configuration
+                .newConfig()
+                .withDialect(Dialect.NEO4J_5)
+                .build();
     }
 }

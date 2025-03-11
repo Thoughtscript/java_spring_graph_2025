@@ -128,7 +128,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 11 Mar 2025 03:36:46 GMT"
+							"value": "Tue, 11 Mar 2025 19:50:26 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -140,7 +140,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"firstName\": \"Class\",\n        \"lastName\": \"Clown\",\n        \"courses\": null\n    }\n]"
+					"body": "[\n    {\n        \"firstName\": \"Class\",\n        \"lastName\": \"Clown\",\n        \"courses\": [\n            {\n                \"courseName\": \"Algebra\",\n                \"students\": null\n            },\n            {\n                \"courseName\": \"English\",\n                \"students\": null\n            },\n            {\n                \"courseName\": \"Art\",\n                \"students\": null\n            }\n        ]\n    }\n]"
 				}
 			]
 		},
@@ -258,7 +258,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 11 Mar 2025 03:36:29 GMT"
+							"value": "Tue, 11 Mar 2025 19:55:42 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -270,7 +270,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"courseName\": \"Art\",\n        \"students\": null\n    }\n]"
+					"body": "[\n    {\n        \"courseName\": \"Art\",\n        \"students\": [\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Clown\",\n                \"courses\": null\n            }\n        ]\n    }\n]"
 				}
 			]
 		},
@@ -406,7 +406,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 11 Mar 2025 03:40:27 GMT"
+							"value": "Tue, 11 Mar 2025 19:51:25 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -419,6 +419,148 @@
 					],
 					"cookie": [],
 					"body": "[\n    {\n        \"courseName\": \"Algebra\",\n        \"students\": [\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Clown\",\n                \"courses\": null\n            }\n        ]\n    },\n    {\n        \"courseName\": \"English\",\n        \"students\": [\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Clown\",\n                \"courses\": null\n            }\n        ]\n    },\n    {\n        \"courseName\": \"Art\",\n        \"students\": [\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Clown\",\n                \"courses\": null\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "All Courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8080/api/graph/course/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"graph",
+						"course",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Courses",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8080/api/graph/course/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"graph",
+								"course",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 19:56:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"courseName\": \"Algebra\",\n        \"students\": [\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Dunce\",\n                \"courses\": null\n            },\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Clown\",\n                \"courses\": null\n            }\n        ]\n    },\n    {\n        \"courseName\": \"History\",\n        \"students\": [\n            {\n                \"firstName\": \"Teachers\",\n                \"lastName\": \"Pet\",\n                \"courses\": null\n            }\n        ]\n    },\n    {\n        \"courseName\": \"English\",\n        \"students\": [\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Clown\",\n                \"courses\": null\n            }\n        ]\n    },\n    {\n        \"courseName\": \"Art\",\n        \"students\": [\n            {\n                \"firstName\": \"Class\",\n                \"lastName\": \"Clown\",\n                \"courses\": null\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "All Students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8080/api/graph/student/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"graph",
+						"student",
+						"all"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Students",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:8080/api/graph/student/all",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"graph",
+								"student",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 11 Mar 2025 19:56:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"firstName\": \"Class\",\n        \"lastName\": \"Clown\",\n        \"courses\": [\n            {\n                \"courseName\": \"Algebra\",\n                \"students\": null\n            },\n            {\n                \"courseName\": \"English\",\n                \"students\": null\n            },\n            {\n                \"courseName\": \"Art\",\n                \"students\": null\n            }\n        ]\n    },\n    {\n        \"firstName\": \"Class\",\n        \"lastName\": \"Dunce\",\n        \"courses\": [\n            {\n                \"courseName\": \"Algebra\",\n                \"students\": null\n            }\n        ]\n    },\n    {\n        \"firstName\": \"Teachers\",\n        \"lastName\": \"Pet\",\n        \"courses\": [\n            {\n                \"courseName\": \"History\",\n                \"students\": null\n            }\n        ]\n    }\n]"
 				}
 			]
 		}
