@@ -55,7 +55,9 @@ cypher-shell -u neo4j -p examplepw
 
 $ > Match (c:Course {name: "Art"}) - [r:HAS_STUDENT] -> (s:Student) RETURN c, collect(r), collect(s);
 
-$ > MATCH (c:Course {name: $courseName}) RETURN c;
+$ > MATCH (c:Course {name: "Art"}) RETURN c;
+
+$ > MATCH (s:Student {firstname: "Class", lastname: "Dunce"}) RETURN s;
 ```
 
 > Other **CQL** queries are available [here](./neo4j/init.cql).

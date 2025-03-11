@@ -6,7 +6,8 @@ server:
 
 spring:
   neo4j:
-    uri: bolt://localhost:7687
+    # Use the Docker container network name
+    uri: bolt://neo4j:7687
     authentication:
       username: neo4j
       password: examplepw

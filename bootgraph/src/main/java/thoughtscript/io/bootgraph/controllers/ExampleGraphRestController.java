@@ -23,8 +23,13 @@ public class ExampleGraphRestController {
         return exampleGraphService.findCourseByCourseName(courseName);
     }
 
+    @GetMapping("/course/student")
+    public List<CourseDTO> getCourseByStudent(@Param("firstName") String firstName, @Param("lastName") String lastName) {
+        return exampleGraphService.findCourseByStudent(firstName, lastName);
+    }
+
     @GetMapping("/student")
-    public List<StudentDTO> getStudent(@Param("firstName") String firstName, @Param("secondName") String secondName) {
-        return exampleGraphService.findStudentByName(firstName, secondName);
+    public List<StudentDTO> getStudent(@Param("firstName") String firstName, @Param("lastName") String lastName) {
+        return exampleGraphService.findStudentByName(firstName, lastName);
     }
 }

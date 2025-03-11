@@ -8,16 +8,14 @@ import org.springframework.data.neo4j.core.schema.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Node
+@Node("Course")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Course {
 
-    private @Id
-    @GeneratedValue Long id;
-
-    @Property("courseName")
+    @Id
+    @Property("name")
     private String courseName;
 
     @Relationship(type = "HAS_STUDENT", direction = Relationship.Direction.OUTGOING)

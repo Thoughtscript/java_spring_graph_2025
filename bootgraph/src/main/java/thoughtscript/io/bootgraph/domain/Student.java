@@ -8,15 +8,13 @@ import org.springframework.data.neo4j.core.schema.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Node
+@Node("Student")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Student {
 
-    private @Id
-    @GeneratedValue Long id;
-
+    @Id
     @Property("firstname")
     private String firstName;
 

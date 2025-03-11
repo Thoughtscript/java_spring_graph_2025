@@ -22,9 +22,24 @@ public class ExampleGraphService {
     @Autowired
     CourseRepository courseRepository;
 
-
     public List<CourseDTO> findCourseByCourseName(String courseName) {
         List<Course> recordSet = courseRepository.findCourseByName(courseName);
+        log.info(recordSet.toString());
+
+        List<CourseDTO> result = new ArrayList<>();
+
+        recordSet.forEach(course -> {
+              result.add(new CourseDTO(course.getCourseName(), null));
+        });
+
+        log.info(result.toString());
+        return result;
+    }
+
+    public List<CourseDTO> findCourseByStudent(String studentFirstName, String studentLastName) {
+        List<Course> recordSet = courseRepository.findCoursesByStudent(studentFirstName, studentLastName);
+        log.info(recordSet.toString());
+
         List<CourseDTO> result = new ArrayList<>();
 
         recordSet.forEach(course -> {
@@ -44,16 +59,12 @@ public class ExampleGraphService {
 
     public List<StudentDTO> findStudentByName(String firstName, String lastName) {
         List<Student> recordSet = studentRepository.findStudentByName(firstName, lastName);
+        log.info(recordSet.toString());
+
         List<StudentDTO> result = new ArrayList<>();
 
         recordSet.forEach(student -> {
-                List<Course> source = student.getCourses();
-                List<CourseDTO> target = new ArrayList<>();
-                source.forEach(course -> {
-                    target.add(new CourseDTO(course.getCourseName(), null));
-                });
-
-               result.add(new StudentDTO(student.getFirstName(), student.getLastName(), target));
+            result.add(new StudentDTO(student.getFirstName(), student.getLastName(), null));
         });
 
         log.info(result.toString());
