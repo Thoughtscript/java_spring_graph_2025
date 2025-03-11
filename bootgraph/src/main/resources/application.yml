@@ -1,0 +1,15 @@
+server:
+  ssl:
+    key-store-type: PKCS12
+    key-store: src/main/resources/bootgraph.p12
+    key-store-password: af3DF*34afefwefehu
+
+spring:
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: neo4j
+      password: examplepw
+  data:
+    neo4j:
+      database=neo4j:

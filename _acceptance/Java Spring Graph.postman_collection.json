@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "038cbc49-3d0f-45ac-8561-4e282d4e1288",
+		"name": "Java Spring Graph",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22810484"
+	},
+	"item": [
+		{
+			"name": "Student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:443/api/graph/student?firstName=Class&lastName=Clown",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"graph",
+						"student"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Class"
+						},
+						{
+							"key": "lastName",
+							"value": "Clown"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:443/api/graph/course?name=Art",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "443",
+					"path": [
+						"api",
+						"graph",
+						"course"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Art"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
